@@ -1,0 +1,14 @@
+node_modules
+
+.env
+
+cache
+.cache*
+dist/
+upload
+uploads
+.upload*
+.uploads*
+
+._*
+.DS_Store
