@@ -1,7 +1,7 @@
 import { Router } from "express";
-import AuthRouter from "./auth.router";
+import { AuthController } from "../../controllers/Auth/auth.controller";
 
-export default class V1Router {
+export default class AuthRouter {
     public router: Router;
 
     constructor() {
@@ -10,6 +10,6 @@ export default class V1Router {
     }
 
     public routes(): void {
-        this.router.use('/auth', new AuthRouter().router);
+        this.router.post('/admin/login', AuthController.loginAdmin);
     }
 }
